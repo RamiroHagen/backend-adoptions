@@ -6,8 +6,6 @@ Este proyecto backend Node.js/Express fue profesionalizado para cumplir un flujo
 
 ## URLs de entrega
 
-> Reemplazar estos valores por tus URLs reales luego de subir el proyecto.
-
 - Repositorio GitHub con tests y Dockerfile: `https://github.com/RamiroHagen/backend-adoptions`
 - Imagen pública DockerHub: `https://hub.docker.com/r/ramihagen99/backend-adoptions`
 - Documentación Swagger local: `http://localhost:3000/api/docs`
@@ -307,23 +305,15 @@ docker rm proyecto-backend-adoptions
 Con Docker Scout:
 
 ```bash
-docker scout quickview TU_USUARIO/proyecto-backend-adoptions:1.0.0
-docker scout cves TU_USUARIO/proyecto-backend-adoptions:1.0.0
+docker scout quickview ramihagen99/proyecto-backend-adoptions:1.0.0
+docker scout cves ramihagen99/proyecto-backend-adoptions:1.0.0
 ```
 
 Alternativa con Trivy:
 
 ```bash
-trivy image TU_USUARIO/proyecto-backend-adoptions:1.0.0
+trivy image ramihagen99/proyecto-backend-adoptions:1.0.0
 ```
-
-Recomendaciones:
-
-- Usar tags versionados.
-- No subir `.env` ni credenciales.
-- Usar tokens de acceso en DockerHub.
-- Revisar vulnerabilidades antes de publicar.
-- Mantener actualizada la imagen base.
 
 ---
 
@@ -375,7 +365,7 @@ Flujo recomendado:
 
 ---
 
-## Comandos rápidos de entrega
+## Comandos rápidos
 
 ```bash
 npm ci
