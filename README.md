@@ -8,8 +8,8 @@ Este proyecto backend Node.js/Express fue profesionalizado para cumplir un flujo
 
 > Reemplazar estos valores por tus URLs reales luego de subir el proyecto.
 
-- Repositorio GitHub con tests y Dockerfile: `https://github.com/TU_USUARIO/TU_REPOSITORIO`
-- Imagen pública DockerHub: `https://hub.docker.com/r/TU_USUARIO/proyecto-backend-adoptions`
+- Repositorio GitHub con tests y Dockerfile: `https://github.com/RamiroHagen/backend-adoptions`
+- Imagen pública DockerHub: `https://hub.docker.com/r/ramihagen99/backend-adoptions`
 - Documentación Swagger local: `http://localhost:3000/api/docs`
 - Especificación OpenAPI JSON: `http://localhost:3000/api/docs.json`
 
@@ -150,18 +150,6 @@ GET /api/v1/adoptions                       -> error interno simulado del servic
 ```bash
 npm ci
 npm test
-```
-
-O ejecutar solo los tests de adopciones:
-
-```bash
-npm run test:adoptions
-```
-
-Ejecutar reporte de cobertura experimental de Node:
-
-```bash
-npm run test:coverage
 ```
 
 ### Resultado esperado
@@ -314,36 +302,6 @@ docker rm proyecto-backend-adoptions
 
 ---
 
-## Subir imagen a DockerHub
-
-### 1. Login
-
-```bash
-docker login
-```
-
-### 2. Etiquetar imagen
-
-```bash
-docker tag proyecto-backend-adoptions:1.0.0 TU_USUARIO/proyecto-backend-adoptions:1.0.0
-docker tag proyecto-backend-adoptions:1.0.0 TU_USUARIO/proyecto-backend-adoptions:latest
-```
-
-### 3. Publicar imagen
-
-```bash
-docker push TU_USUARIO/proyecto-backend-adoptions:1.0.0
-docker push TU_USUARIO/proyecto-backend-adoptions:latest
-```
-
-### 4. URL pública esperada
-
-```txt
-https://hub.docker.com/r/TU_USUARIO/proyecto-backend-adoptions
-```
-
----
-
 ## Escaneo básico de seguridad
 
 Con Docker Scout:
@@ -417,21 +375,6 @@ Flujo recomendado:
 
 ---
 
-## Evidencia sugerida para entrega
-
-Agregar capturas o logs de:
-
-- `npm test` con 12 tests pasados.
-- `docker build` exitoso.
-- `docker run` ejecutando la API.
-- `curl http://localhost:3000/health`.
-- Swagger abierto en `/api/docs`.
-- Imagen publicada en DockerHub.
-- Escaneo Docker Scout o Trivy.
-- Pipeline CI/CD exitoso en GitHub Actions.
-
----
-
 ## Comandos rápidos de entrega
 
 ```bash
@@ -462,10 +405,3 @@ Cumple con:
 - Preparación para DockerHub.
 - Base de CI/CD.
 - Guía de despliegue cloud.
-
-Pendiente para completar por el alumno:
-
-- Subir el repositorio a GitHub y reemplazar la URL placeholder.
-- Crear el repositorio en DockerHub y reemplazar la URL placeholder.
-- Ejecutar el escaneo real sobre la imagen publicada.
-- Agregar capturas reales si la plataforma de entrega las solicita.
